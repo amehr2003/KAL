@@ -1,0 +1,17 @@
+h1 {
+    color: black;
+}
+
+body {
+    background-image: url('beauty.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: lightgray; 
+}
+
+p {
+    font-size: 30px;
+    margin-top: 20px;
+}
