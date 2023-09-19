@@ -1,3 +1,4 @@
+#This is the web page for CS4800 project.
 from flask import Flask, render_template
 
 app = Flask(__name__)
