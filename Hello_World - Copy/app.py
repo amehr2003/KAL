@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SubmitField
+import pandas as pd
 
 class BeautyForm(FlaskForm):
     eye_color = StringField('Eye Color')
@@ -11,6 +12,9 @@ class BeautyForm(FlaskForm):
 
 app = Flask(__name__)
 
+# Load makeup advice data from a CSV file
+makeup_data = pd.read_csv('makeup_data.csv')
+
 @app.route('/')
 def hello_world():
     form = BeautyForm()  
@@ -18,7 +22,7 @@ def hello_world():
 
 @app.route('/makeup-advice', methods=['GET', 'POST'])
 def makeup_advice():
-    form = BeautyForm()  # Create an instance of your BeautyForm class
+    form = BeautyForm()  
 
     if form.validate_on_submit():
         # Process user input and provide makeup advice
@@ -27,19 +31,25 @@ def makeup_advice():
         skin_tone = form.skin_tone.data
         season = form.season.data
 
-        # Perform your makeup advice logic here (replace with your logic)
-        makeup_advice_result = get_makeup_advice(eye_color, hair_color, skin_tone, season)
+        # Filter the makeup data based on user input
+        filtered_data = makeup_data[
+            (makeup_data['EyeColor'] == eye_color) &
+            (makeup_data['HairColor'] == hair_color) &
+            (makeup_data['SkinTone'] == skin_tone) &
+            (makeup_data['Season'] == season)
+        ]
 
-        # For now, let's just print the user input and advice result
-        print(f'Eye Color: {eye_color}, Hair Color: {hair_color}, Skin Tone: {skin_tone}, Season: {season}')
-        print(f'Makeup Advice: {makeup_advice_result}')
+        # Get makeup advice based on the filtered data
+        if not filtered_data.empty:
+            makeup_advice_result = filtered_data.iloc[0]['MakeupAdvice']
+        else:
+            makeup_advice_result = "No makeup advice available for this combination."
+
+        dataframe_html = filtered_data.to_html(classes='table table-striped', escape=False, index=False)
+
+        return render_template('makeup_advice.html', form=form, makeup_advice=makeup_advice_result)
 
     return render_template('makeup_advice.html', form=form)
-
-def get_makeup_advice(eye_color, hair_color, skin_tone, season):
-    # Replace this with your actual makeup advice logic
-    # This is just a placeholder
-    return "Your makeup advice goes here."
 
 if __name__ == '__main__':
     app.run(debug=True)
