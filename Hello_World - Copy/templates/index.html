@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, everyone! Welcome to Beauty Adhancer!</h1>
+        <p>We are here to give you advice for your makeup color tone.</p>
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.eye_color.label(class="form-label") }}
+                {{ form.eye_color(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.hair_color.label(class="form-label") }}
+                {{ form.hair_color(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.skin_tone.label(class="form-label") }}
+                {{ form.skin_tone(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.season.label(class="form-label") }}
+                {{ form.season(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+
+        {% if dataframe is defined %}
+            {{ dataframe|safe }}
+        {% endif %}
+    </div>
+</body>
+</html>
