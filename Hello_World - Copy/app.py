@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SubmitField
 import pandas as pd
+import pillow as PIL
 
 class BeautyForm(FlaskForm):
     eye_color = StringField('Eye Color')
@@ -22,7 +23,12 @@ def hello_world():
 
 @app.route('/makeup-advice', methods=['GET', 'POST'])
 def makeup_advice():
-    form = BeautyForm()  
+    form = BeautyForm()
+
+def image_view():
+    from PIL import Image
+    img = Image.open("style.css")
+    img.show
 
     if form.validate_on_submit():
         # Process user input and provide makeup advice
