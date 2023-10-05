@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SubmitField
 import pandas as pd
+import unittest
 
 class BeautyForm(FlaskForm):
     eye_color = StringField('Eye Color')
@@ -51,5 +52,17 @@ def makeup_advice():
 
     return render_template('makeup_advice.html', form=form)
 
+class TestMyApp(unittest.TestCase):
+    def setUp(self):
+        # Create a test client
+        self.app = app.test_client()
+        self.app.testing = True
+        
+    def test_home_page(self):
+        response = self.app.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Welcome to the Beauty Adhancer web app!', response.data)
+        
 if __name__ == '__main__':
     app.run(debug=True)
+    unittest.main()
