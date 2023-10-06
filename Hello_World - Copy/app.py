@@ -45,6 +45,13 @@ def image_view():
             (makeup_data['Season'] == season)
         ]
 
+        def test_default_values(self):
+            # Test default values of UI elements
+            self.assertEqual(self.form.eye_color.text(), "")
+            self.assertEqual(self.form.hair_color.text(), "")
+            self.assertEqual(self.form.skin_tone.text(), "")
+            self.assertEqual(self.form.season.currentText(), "Spring")
+
         # Get makeup advice based on the filtered data
         if not filtered_data.empty:
             makeup_advice_result = filtered_data.iloc[0]['MakeupAdvice']
