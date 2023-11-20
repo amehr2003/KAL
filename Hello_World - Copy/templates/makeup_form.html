@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Makeup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{{ url_for('static', filename='beauty.jpg') }}"); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000;
+            font-size: 24px;
+        }
+
+        p {
+            text-align: center;
+            color: #333; 
+            font-size: 30px;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select, input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        select:hover, input[type="submit"]:hover {
+            background-color: #e0e0e0;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome to Beauty Adhancer!<br> We are here to give you the best advice for your makeup!</p>
+    <h1>Selection Form</h1>
+    <form action="/advice" method="POST">
+        <label for="eye_color">Eye Color:</label>
+        <select name="eye_color" id="eye_color">
+            <option value="amber">Amber</option>
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="blue">Blue</option>
+            <option value="gray">gray</option>
+            <option value="green">Green</option>
+            <option value="Hazel">Hazel</option>
+            <option value="ice blue">Ice Blue</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for "hair_color">Hair Color:</label>
+        <select name="hair_color" id="hair_color">
+            <option value="aubutn">Auburn</option>
+            <option value="white">White</option>
+            <option value="blonde">Blonde</option>
+            <option value="brunette">Brunette</option>
+            <option value="red">Red</option>
+            <option value="light brown">Light Brown</option>
+            <option value="medium brown">Medium Brown</option>
+            <option value="dark brown">Dark Brown</option>
+            <option value="gray">Gray</option>
+            <option value="black">Black</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="skin_tone">Skin Tone:</label>
+        <select name="skin_tone" id="skin_tone">
+            <option value="fair">Fair</option>
+            <option value="medium">Medium</option>
+            <option value="olive">Olive</option>
+            <option value="brown">Brown</option>
+            <option value="black">Black</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <label for="season">Season:</label>
+        <select name="season" id="season">
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+            <option value="winter">Winter</option>
+        </select>
+
+        <input type="submit" value="Get Makeup Advice">
+    </form>
+</body>
+</html>
