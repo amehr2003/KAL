@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='pink.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px; /* Set the width to a specific size in pixels */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Light Fall Color Palette</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Light Fall: Light + Cool</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Fall</strong> color type is <strong>light</strong> and <strong>fresh</strong>.  You can use a lot of <strong>warm shades </strong> throughout your whole look for the perfect fall look!.
+            </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='test3.jpg') }}" alt="Makeup Example 1" width="300" height="300">
+                <figcaption>Image 1: Light Fall Makeup</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='test4.png') }}" alt="Makeup Example 2" width="300" height="300">
+                <figcaption>Image 2: Light Fall Color Palette</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition, a warm highligher would be beautiful on your skin in the fall! Use black mascara and black eyeliner for a perfect fall look!</p>
+        </div>
+
+        <div class="explanation">
+            <h3>Recommended Makeup Products:</h3>
+            <ul>
+                <li>
+                    <strong>Product 1:</strong> This would be a great warm, earthy eyeshadow palette for the fall!
+                    <a href="https://www.sephora.com/product/pro-eyeshadow-palette-hg-P425705?skuId=2020956&icid2=products%20grid:p425705:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <strong>Product 2:</strong> This is the perfect deep red lip shade for you!
+                    <a href="https://www.sephora.com/product/rare-beauty-by-selena-gomez-stay-vulnerable-glossy-lip-balm-P467449?skuId=2418622&icid2=products%20grid:p467449:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <p>In addition, a <strong> warm blush shade </strong> is the best color for you during the fall!</p>
+                    <a href="https://www.sephora.com/product/saie-the-glow-sculpt-P505541?skuId=2679470&icid2=products%20grid:p505541:product" target="_blank">Buy Now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
