@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='pink.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px; /* Set the width to a specific size in pixels */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Light Summer Color Palette</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Light Summer: Light + Cool</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Summer</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You don't need a lot of makeup to achieve a natural look. All you need are neutral shades for the most beautiful makeup look! You can also use a <strong>soft pink</strong> lip product, and mascara. It also works if you use neutral eyeyeshadow colors from a palette. You can also add some eyeliner and mascara to complete the look!
+            </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='test3.jpg') }}" alt="Makeup Example 1" width="300" height="300">
+                <figcaption>Image 1: Light Summer Makeup</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='test4.png') }}" alt="Makeup Example 2" width="300" height="300">
+                <figcaption>Image 2: Light Summer Color Palette</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition, a soft, cool-toned bush would look stunning on you!</p>
+        </div>
+
+        <div class="explanation">
+            <h3>Recommended Makeup Products:</h3>
+            <ul>
+                <li>
+                    <strong>Product 1:</strong> You can never go wrong with a lightweight tinted moisturizer!
+                    <a href="https://www.sephora.com/product/saie-slip-tint-dewy-tinted-moisturizer-spf-35-sunscreen-P468210?skuId=2497485&icid2=products%20grid:p468210:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <strong>Product 2:</strong> This is the perfect soft pink lipstick for you!
+                    <a href="https://www.sephora.com/product/patrick-ta-major-headlines-matte-suede-lipstick-P458748?skuId=2699304&icid2=products%20grid:p458748:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <p>In addition, the <strong> champagne highlighter </strong> is the perfect addition to a nice, glowy look!</p>
+                    <a href="https://www.sephora.com/product/charlotte-tilbury-hollywood-glow-glide-highlighter-P503729?skuId=2643369&icid2=products%20grid:p503729:product" target="_blank">Buy Now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
