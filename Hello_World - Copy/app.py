@@ -3,6 +3,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SubmitField
 import pandas as pd
 import unittest
+from pymongo import MongoClient
+import pymongo
 
 class BeautyForm(FlaskForm):
     eye_color = StringField('Eye Color')
@@ -62,7 +64,41 @@ class TestMyApp(unittest.TestCase):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Welcome to the Beauty Adhancer web app!', response.data)
-        
+
+# Connect to MongoDB
+client = MongoClient("mongodb://localhost:27017/")
+db = client["user_login_db"]
+collection = db["user_collection"]
+
+def create_user(username, password):
+
+    # Create a user document
+    user = {
+        "username": username,
+        "password": password
+    }
+
+    # this stores the login information inside of mongo
+    collection.insert_one(user)
+
+
+def authenticate_user(username, password):
+
+    user = collection.find_one({"username": username, "password": password})
+
+    if user:
+        print("Login successful!")
+    else:
+        print("Invalid username or password.")
+
+
+# THIS IS THE EXAMPLE SO THAT WE CAN USE IT
+create_user("user1", "password123")
+
+# EXAMPLE FOR AUTHENTICATION
+authenticate_user("user1", "password123")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
     unittest.main()
