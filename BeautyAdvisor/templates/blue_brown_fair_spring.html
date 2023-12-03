@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='pink.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px; /* Set the width to a specific size in pixels */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Light Spring Color Palette</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Light Spring: Light + Cool</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Spring</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You can also use a <strong>soft pink</strong> lip product, and add some brown mascara. 
+                Also, for your beautiful combination of blue eyes, brown hair, and fair skin during the spring season, embrace the freshness of the season with pastel eyeshadows like light pinks, lavender, or soft greens. These shades will complement your blue eyes and add a touch of warmth to your look. Opt for a rosy or peachy blush to give your fair skin a healthy and natural flush, adding a youthful glow to your overall makeup. Choose lip colors in shades of coral, pink, or nude to harmonize with your fair skin tone and balance the vibrancy of your eye makeup. 
+            </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='brown1.jpg') }}" alt="Makeup Example 1" width="300" height="300">
+                <figcaption>Image 1: Light Spring Makeup</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='brown2.png') }}" alt="Makeup Example 2" width="300" height="300">
+                <figcaption>Image 2: Spring Makeup Model</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition, a liquid highlighter would make your look more dewy for the spring! Define your eyes with brown mascara and eyeliner for a softer look that enhances your brown hair and makes your blue eyes pop. Remember, these are just guidelines, and makeup is a form of self-expression, so feel free to experiment and find what makes you feel confident and beautiful!</p>
+        </div>
+
+        <div class="explanation">
+            <h3>Recommended Makeup Products:</h3>
+            <ul>
+                <li>
+                    <strong>Product 1:</strong> This is a super easy to use foundation stick!
+                    <a href="https://www.sephora.com/product/fenty-eaze-drop-blur-smooth-tint-stick-P507453?skuId=2700805&icid2=products%20grid:p507453:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <strong>Product 2:</strong> This is colorful eyeshadow palette you can play with in the spring!
+                    <a href="https://www.sephora.com/product/natasha-denona-mini-pastel-eyeshadow-palette-P503993?skuId=2640803&icid2=products%20grid:p503993:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <p>In addition, a <strong> soft pink lip gloss </strong> is the perfect lip gloss shade for you!</p>
+                    <a href="https://www.sephora.com/product/rare-beauty-by-selena-gomez-soft-pinch-tinted-lip-oil-P505568?skuId=2640159&icid2=products%20grid:p505568:product" target="_blank">Buy Now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

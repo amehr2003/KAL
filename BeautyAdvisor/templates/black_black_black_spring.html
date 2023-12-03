@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Halvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='back2.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px; /* Set the width to a specific size in pixels */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<h1><em>Light Spring Color Palette and Wardrobe Guide for Black Skin tone</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Light Spring: Light + Warm<br></h2>
+        <div class="explanation">
+            <p>For a captivating spring makeup look that complements black hair, black eyes, and a deep skin tone, consider a <strong>radiant foundation</strong> matching your skin tone, paired with <strong>warm blush</strong> tones like deep oranges or berries for a natural flush. Enhance your eyes with earthy eyeshadow shades such as copper or warm browns, and define them with a black or brown eyeliner. Achieve bold, luscious lashes with a volumizing mascara in black. Experiment with vibrant lip colors like deep reds or plums in matte or satin finishes for a striking effect. </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='black1.jpg') }}" alt="Makeup Example 1" width="300" height="300">
+                <figcaption>Image 1: Spring Makeup for Black Skin Tone</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='black2.jpg') }}" alt="Makeup Example 2" width="300" height="300">
+                <figcaption>Image 2: Light Spring Color Palette</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition,  Highlight your features with a <strong>gold or bronze-toned highlighter</strong>, and set your makeup in place with a long-lasting setting spray. This combination of warm, rich hues and bold accents will bring out the natural beauty of your features during the spring season.</p>
+        </div>
+
+        <div class="explanation">
+            <div style="text-align: center;">
+                <h3>Recommended Makeup Products</h3>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="text-align: center;">
+                    <strong>Fenty Beauty Pro Filt'r Soft Matte Longwear Foundation</strong>
+                    <img class="makeup-image" src="{{ url_for('static', filename='black3.png') }}" alt="Foundation" width="60" height="300">
+                    <p>Elevate your eye makeup with this luxurious eyeshadow palette featuring a stunning array of warm, metallic shades. The rich pigments and versatile colors in this palette complement black eyes and add a touch of glamour to your look.</p>
+                    <a href="https://www.sephora.com/product/mothership-v-eyeshadow-palette-P86825294?country_switch=us&lang=en&skuId=2111938&om_mmc=ppc-GG_17791296877___2111938__9031164_c&country_switch=us&lang=en&gad_source=1&gclid=CjwKCAiA9ourBhAVEiwA3L5RFkAJJtl_Unqj1jp0wq-INeIoA5TNbUjTUX7JeQIxiL-F57_COzY_nBoCuG8QAvD_BwE&gclsrc=aw.ds" target="_blank">Buy Now</a>
+                </div>
+                <div style="text-align: center;">
+                    <strong>Pat McGrath Labs Mothership V Eyeshadow Palette</strong>
+                    <img class="makeup-image" src="{{ url_for('static', filename='black4.png') }}" alt="Highlighter Duo" width="100" height="300">
+                    <p>Enhance the healthy color of your face with Benefit Cosmetics' Coralista Blush. The coral shade adds a natural flush to your cheeks, complementing the Light Spring color type.</p>
+                    <a href="https://www.sephora.com/product/box-o-powder-blush-P500253?country_switch=us&lang=en&skuId=2520070&om_mmc=ppc-GG_17789371101___2520070__9031164_c&country_switch=us&lang=en&gad_source=1&gclid=CjwKCAiA6byqBhAWEiwAnGCA4Far1DojmBUv_t0mDJ2DV7smTH_gg8xOoGWuWKgexeaS5p6pqCk-xhoCV0EQAvD_BwE&gclsrc=aw.ds" target="_blank">Buy Now</a>
+                </div>
+                <div style="text-align: center;">
+                    <strong>NARS Powermatte Lip Pigment</strong>
+                    <img class="makeup-image" src="{{ url_for('static', filename='black5.png') }}" alt="Product 3" width="100" height="300">
+                    <p>The long-wearing, lightweight formula delivers intense color, making your lips a focal point in your makeup routine.</p>
+                    <a href="https://www.sephora.com/product/powermatte-lip-pigment-P421485?country_switch=us&lang=en&skuId=1965417&om_mmc=ppc-GG_17791296877___1965417__9031164_c&country_switch=us&lang=en&gad_source=1&gclid=CjwKCAiA9ourBhAVEiwA3L5RFq9QLLFE8800pSX86NvjM-TwgOYcyhaj23guZOw1fLoAUXJzZ68aORoCSBoQAvD_BwE&gclsrc=aw.ds" target="_blank">Buy Now</a>
+                </div>
+            </div>
+        </div>   
+
+    </div>
+</body>
+</html>

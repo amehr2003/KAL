@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='back4.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 350px; /* Increase the width */
+            height: 350px; /* Increase the height */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        /* Center the heading */
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Cool Winter Color Palette and Wardrobe Guide</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Cool Winter: Bright + Cool</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Winter</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You don't need a lot of makeup to achieve a natural look. All you need are powdered products for a nice, matte look for the winter. You can also use a <strong>hot pink</strong> blush. It also works if you use neutral eyeshadow colors. You can also add some white eyeliner and black mascara to complete the look!
+            </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='winter5.png') }}" alt="Makeup Example 1">
+                <figcaption>Image 1: Light Winter Makeup</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='winter4.png') }}" alt="Makeup Example 2">
+                <figcaption>Image 2: Winter Color Palette</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition, the hot pink blush is fabulous because you have a fair-tone skin color, and pink looks wonderful in the winter time! You can also use different shades of pink lip glosses that would look perfect on you! Use black mascara, and some white eyeliner in your waterline for a snowy look for the winter.</p>
+        </div>
+        <div class="explanation">
+            <h3>Recommended Makeup Products</h3>
+            <ul style="display: flex; justify-content: space-around; padding: 0; list-style: none;">
+                <!-- Product 1 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Urban Decay White Waterproof Eyeliner Pencil</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='winter2.png') }}" alt="White Eyeliner" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/24-7-glide-on-eye-pencil-P133707?skuId=1051333&icid2=products%20grid:p133707:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+        
+                <!-- Product 2 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Patrick TA Crème & Powder Blush Duo</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='winter3.png') }}" alt="Pink Blush Duo" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/patrick-ta-major-headlines-cream-powder-blush-duo-P458747?skuId=2699353&icid2=products%20grid:p458747:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+        
+                <!-- Product 3 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Fenty Beauty by Rihanna Gloss Bomb Lip Luminizer</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='winter1.png') }}" alt="Light Pink Lip Gloss" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/gloss-bomb-universal-lip-luminizer-P67988453?skuId=2327252&icid2=products%20grid:p67988453:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>

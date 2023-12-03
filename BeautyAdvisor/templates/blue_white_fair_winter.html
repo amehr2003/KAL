@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='back4.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 500px; /* Increased the width for a larger image */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Light Winter Color Palette</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Light Winter: Light + Cool</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Winter</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You don't need a lot of makeup to achieve a natural look. All you need are powdered products for a nice, matte look for the winter. You can also use a <strong>cool toned pink</strong> blush. It also works if you use neutral eyeyeshadow colors. You can also add some eyeliner and black mascara to complete the look!
+            </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='wint1.png') }}" alt="Makeup Example 1" width="500" height="500">
+                <figcaption>Winter Makeup for White hair</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition, you can wear a cool toned pink lipgloss to complete your winter look!</p>
+        </div>
+
+        <div class="explanation">
+            <h3>Recommended Makeup Products:</h3>
+            <ul>
+                <li>
+                    <strong>Product 1:</strong> This is the perfect cool toned highlighter shade for you!
+                    <a href="https://www.sephora.com/product/rare-beauty-by-selena-gomez-positive-light-silky-touch-highlighter-P503711?skuId=2629491&icid2=products%20grid:p503711:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <strong>Product 2:</strong> This is the best cool toned blush for you!
+                    <a href="https://www.sephora.com/product/fenty-beauty-rihanna-cheeks-out-freestyle-cream-blush-P19700127?skuId=2700938&icid2=products%20grid:p19700127:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <p>In addition, a <strong> cool toned foundation </strong> is the perfect shade to wear in the winter!</p>
+                    <a href="https://www.sephora.com/product/makeup-by-mario-surreal-foundation-P503679?skuId=2620235&icid2=products%20grid:p503679:product" target="_blank">Buy Now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

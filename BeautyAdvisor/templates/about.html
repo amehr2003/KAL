@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Beauty Adhancer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{{ url_for('static', filename='back2.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000;
+            font-size: 36px;
+            margin-top: 50px;
+        }
+
+        p {
+            text-align: left;
+            color: #000;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .center-image {
+            display: block;
+            margin: 20px auto; /* Center the image */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 100%; /* Make the image responsive */
+        }
+    </style>
+</head>
+<body>
+    <h1>About Beauty Adhancer</h1>
+
+    <div class="content-container">
+        <p>
+            <strong>What Color Makeup Should I Wear? Color Theory Simplified</strong><br>
+            <img class="center-image" src="{{ url_for('static', filename='about1.png') }}" alt="About Image" width="600">
+        </p>
+
+        <p>
+            Welcome to Beauty Adhancer! We are passionate about helping you discover the perfect makeup
+            look tailored to your unique features and preferences. Our goal is to provide personalized
+            recommendations based on your eye color, hair color, skin tone, and the season.
+        </p>
+
+        <p>
+            Whether you're a makeup enthusiast or someone looking for simple and effective beauty advice,
+            Beauty Adhancer is here to guide you. Our team of beauty experts has curated a collection of
+            makeup tips, product recommendations, and seasonal trends to keep you looking fabulous all year round.
+        </p>
+
+        <p>
+            Explore the world of beauty with confidence. Get started with our makeup recommendation tool
+            and discover a new level of beauty enhancement. Thank you for choosing Beauty Adhancer as your
+            go-to beauty advisor.
+        </p>
+
+        <p>
+            <strong>The Basics</strong><br>
+            To begin, we want to understand our terminology. When we are choosing a makeup color, we want to distinguish some qualities about that color. Technically, color has three distinct qualities: <strong>Hue, Saturation, and Depth.</strong>
+        </p>
+
+        <p>
+            <strong>Hue</strong> is what the actual color is, red, blue, brown, etc. When we’re choosing which hue will work best for us, we want to first consider what colors we have in our skin, hair, and eyes. For example, people with blond hair and blue eyes tend to look good in gold and brown eyeshadows. If your skin is cool or pink undertone, you’ll probably look good in soft pink blush and lipstick while people with tan skin and brown eyes look good in grey, silver, and blue eyeshadows.
+        </p>
+
+        <p>
+            <strong>Saturation</strong> is how intense the color is. Highly saturated colors work well for dramatic looks while low saturation colors look softer. For example, for a natural-looking, daytime pink blush, we want a blush that’s not too saturated. While we typically want a red lipstick worn in the evening to have a lot of saturation. Keep in mind that, just because a color is very saturated doesn’t mean it will be dark. It will just be intense or bright against the tone of your skin.
+        </p>
+
+        <p>
+            <strong>Depth</strong>, of course, means how light or dark the color is. It’s important to consider the depth of your skin when choosing the depth of your makeup colors. For a color that’s too light may not show up while a color that’s too dark may look more dramatic than you want.
+        </p>
+
+        <p>
+            When choosing colors that work well with our features, we typically look at our skin, eyes, and hair color to determine what will work best. We have the option of using colors that are similar to our features – Monochromatic, or using colors that are opposite the color of our features – Contrasting. To help us understand, look at the color wheel. Colors on the opposite side of the color wheel are contrasting, and colors that match are monochromatic.
+            <img class="center-image" src="{{ url_for('static', filename='about2.png') }}" alt="About Image" width="500">
+        </p>
+
+        <p>
+            <strong>Let’s take a closer look at the color wheel for makeup.</strong> Historically it was thought that blue eyeshadow would make the eyes look bluer, but in reality, we realized that the pigment of a blue eyeshadow would inevitably be bluer than the eyes thus making the eye look less blue in comparison. We realized that colors like orange, gold, and copper are best for contrasting with blue eyes to make them look bluer in comparison. Likewise, green eyes look most green when enhanced with purple. Brown eyes have often been confusing since blue is the closest opposite of brown. In reality, a brown eye looks just as beautiful when enhanced with cool colors such as grey, platinum or silver. To learn more about which eyeshadows look best with your eye color, check out How to Choose the Best Eyeshadow for Every Eye Color.
+        </p>
+
+        <p>
+            <strong>With all of this information stated, it is important to know that you don’t have to wear these colors to make your eyes look good.</strong> We’ve found that varying levels of flesh tones, soft browns, and neutral taupes look beautiful on most eye colors. For example, I love using our Sweet Spot Eyeshadow Trio, Naturally Matte Kit or Daytime Eyeshadow Kit on any eye color. These are universal palettes.
+        </p>
+    </div>
+</body>
+</html>
