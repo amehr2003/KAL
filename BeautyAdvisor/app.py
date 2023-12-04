@@ -43,5 +43,9 @@ def get_makeup_advice():
 def about():
     return render_template('about.html', user_count=user_count)
 
+@app.route('/recommended-sellers')
+def recommended_sellers():
+    return render_template('recommended_sellers.html', user_count=user_count)
+
 if __name__ == '__main__':
     app.run(debug=True)
