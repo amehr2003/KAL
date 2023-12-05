@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='pink.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px; /* Set the width to a specific size in pixels */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Light Summer Color Palette</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Light Summer: Light + Cool</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Summer</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You can also use a <strong>soft pink</strong> lip products and blush. You can also use more cream products for a more dewy, summer look! 
+            </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='test3.jpg') }}" alt="Makeup Example 1" width="300" height="300">
+                <figcaption>Image 1: Light Summer Makeup</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='test4.png') }}" alt="Makeup Example 2" width="300" height="300">
+                <figcaption>Image 2: Light Summer Color Palette</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition, a liquid highlighter will be perfect on you! </p>
+        </div>
+
+        <div class="explanation">
+            <h3>Recommended Makeup Products:</h3>
+            <ul>
+                <li>
+                    <strong>Product 1:</strong> This is a perfect lip oil for you for the summertime!
+                    <a href="https://www.sephora.com/product/shade-slick-gelee-sheer-tinted-lip-oil-P505330?skuId=2675502&icid2=products%20grid:p505330:product" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <strong>Product 2:</strong> This is the perfect cream blush for you!
+                    <a href="https://www.sephora.com/product/merit-flush-balm-cream-blush-P468693?country_switch=us&lang=en&skuId=2636835&om_mmc=ppc-GG_17789371101___2636835__9031242_c&country_switch=us&lang=en&gad_source=1&gclid=Cj0KCQiApOyqBhDlARIsAGfnyMrAORpcXEcp2rFKOANyC05hjbDbt9enadmEMWsvcwCj35fuNXXpWaEaAi0WEALw_wcB&gclsrc=aw.ds" target="_blank">Buy Now</a>
+                </li>
+                <li>
+                    <p>In addition, a <strong> cool toned eyeshadow palette </strong> would look amazing on you!</p>
+                    <a href="https://www.sephora.com/product/tarte-juicy-palette-tartelette-P473840?skuId=2478592&icid2=products%20grid:p473840:product" target="_blank">Buy Now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

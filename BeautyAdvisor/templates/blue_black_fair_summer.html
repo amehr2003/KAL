@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='pink.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .larger-image {
+            width: 500px; /* Increased the width for a larger image */
+            height: 500px; /* Increased the height for a larger image */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        /* Center the heading */
+        h3 {
+            text-align: center;
+        }
+
+        /* Style for the title on top of the image */
+        .image-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Cool Summer Color Palette and Wardrobe Guide</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Cool Summer: Cool + Soft</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Summer</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You don't need a lot of makeup to achieve a natural look. All you need are neutral shades for the most beautiful makeup look! You can also use a <strong>pink</strong> lip gloss, and black or brown mascara. Adding some pink liquid blush would also look great on you! 
+                Use cool, silvery products, highlighters, powder, instead of black, look for charcoal grey or soft dark blue mascara and eyeliner that will fabulously match your misty beauty!
+            </p>
+        </div>
+        
+        <div class="explanation">
+            <p>In addition, add some setting spray and cream products for a nice, dewy look for the summer time!</p>
+        </div>
+        
+        <!-- Title on top of the image -->
+        <div class="image-title">Cool Summer Inspirations</div>
+
+        <!-- Larger Image -->
+        <figure>
+            <img class="larger-image" src="{{ url_for('static', filename='summer.png') }}" alt="Cool Summer Inspirations">
+            <figcaption>Cool Summer Inspirations</figcaption>
+        </figure>
+        
+        <div style="display: flex; justify-content: center;">
+            <!-- Image 1 -->
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='summer2.jpg') }}" alt="Makeup Example 1">
+                <figcaption>Image 1: Soft Summer Makeup</figcaption>
+            </figure>
+            
+            <!-- Image 2 -->
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='summer1.png') }}" alt="Makeup Example 2">
+                <figcaption>Image 2: Cool Summer Color Palette</figcaption>
+            </figure>
+        </div>
+        
+        <div class="explanation">
+            <h3>Recommended Makeup Products:</h3>
+            <ul style="display: flex; justify-content: space-around; padding: 0; list-style: none;">
+                <!-- Product 1 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Rare Beauty Soft Pinch Liquid Blush</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='summer3.png') }}" alt="Liquid Blush" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/rare-beauty-by-selena-gomez-soft-pinch-liquid-blush-P97989778?skuId=2362093&icid2=products%20grid:p97989778:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+        
+                <!-- Product 2 -->
+                <li style="flex: 1; text-align: center;">
+                   <strong>Charlotte Tilbury Airbrush Flawless Setting Spray</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='summer4.png') }}" alt="Setting Spray" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/charlotte-tilbury-airbrush-flawless-setting-spray-P461147?country_switch=us&lang=en&skuId=2368439&om_mmc=ppc-GG_17791296877___2368439__9031230_c&country_switch=us&lang=en&gad_source=1&gclid=CjwKCAiAgeeqBhBAEiwAoDDhnx3nGgTMLgB2gbqhdGRna6ACo4W9bUEKH1nXhUCpxjEBBTnonZwFIxoC0eoQAvD_BwE&gclsrc=aw.ds" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+        
+                <!-- Product 3 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Rare Beuty Light Liquid Luminizer Highlight</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='summer5.png') }}" alt="Liquid Highlighter" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/rare-beauty-by-selena-gomez-positive-light-liquid-luminizer-highlight-P38855877?skuId=2362168&icid2=products%20grid:p38855877:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+</html>

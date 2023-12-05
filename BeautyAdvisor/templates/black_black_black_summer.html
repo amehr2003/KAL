@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Halvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='back2.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px; /* Set the width to a specific size in pixels */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+    </style>
+</head>
+<h1><em>Warm Summer Color Palette and Wardrobe Guide for Black Skin tone</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Summer: Bright + Warm<br></h2>
+        <div class="explanation">
+            <p>For a radiant summer look that complements black eyes, black hair, and black skin, opt for a lightweight and dewy makeup routine. Start with a hydrating primer to create a smooth canvas, followed by a <strong>luminous foundation</strong> like the <strong>Fenty Beauty Eaze Drop Blurring Skin Tint</strong>, offering buildable coverage while letting your natural skin shine through. Enhance your eyes with warm-toned eyeshadows; the Juvia's Place The Nubian Eyeshadow Palette is perfect for creating sultry and vibrant eye looks. Add a pop of color to your lips with a coral or peach lipstick such as the MAC Cosmetics Matte Lipstick in "Tropic Tonic." </p>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='black6.jpg') }}" alt="Makeup Example 1" width="300" height="300">
+                <figcaption>Image 1: Summer Makeup for Black Skin Tone</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='black7.png') }}" alt="Makeup Example 2" width="300" height="300">
+                <figcaption>Image 2: Summer Color Palette</figcaption>
+            </figure>
+        </div>
+        <div class="explanation">
+            <p>In addition, finish the look with a sun-kissed glow using the Fenty Beauty Sun Stalk'r Instant Warmth Bronzer. Don't forget to set your makeup with a refreshing setting spray, like the Urban Decay All Nighter Ultra Matte Setting Spray, to keep you looking flawless in the summer heat.</p>
+        </div>
+
+        <div class="explanation">
+            <div style="text-align: center;">
+                <h3>Recommended Makeup Products</h3>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="text-align: center;">
+                    <strong>Fenty Beauty Eaze Drop Blurring Skin Tint</strong>
+                    <img class="makeup-image" src="{{ url_for('static', filename='black8.png') }}" alt="Foundation" width="60" height="300">
+                    <p> Achieve a radiant complexion with this lightweight and buildable skin tint from Fenty Beauty. It's perfect for providing a dewy finish that enhances your natural beauty.</p>
+                    <a href="https://www.sephora.com/product/fenty-beauty-rihanna-eaze-drop-blurring-skin-tint-P470025?country_switch=us&lang=en&skuId=2431831&om_mmc=ppc-GG_17791296877___2431831__9031164_c&country_switch=us&lang=en&gad_source=1&gclid=CjwKCAiA9ourBhAVEiwA3L5RFoegKUC-xNw-Y6k7kFakCrBz7P4Ibczey3ylnkUTLSHr-qTCANY7qBoCgCIQAvD_BwE&gclsrc=aw.ds" target="_blank">Buy Now</a>
+                </div>
+                <div style="text-align: center;">
+                    <strong>Juvia's Place The Nubian Eyeshadow Palette</strong>
+                    <img class="makeup-image" src="{{ url_for('static', filename='black9.png') }}" alt="Highlighter Duo" width="100" height="300">
+                    <p>Create stunning eye looks with this warm-toned eyeshadow palette. The rich and pigmented shades complement black eyes beautifully, allowing you to experiment with sultry and vibrant eye makeup.</p>
+                    <a href="https://www.ulta.com/p/nubian-eyeshadow-palette-xlsImpprod18771149?sku=2536106&cmpid=PS_Non!google!Product_Listing_Ads&utm_source=google&utm_medium=paidsearch&cagpspn=pla&CATCI=aud-842617173106:pla-683425019412&CAAGID=107718645596&CAWELAID=330000200001487435&CATARGETID=330000200002459488&CADevice=c&gad_source=1&gclid=CjwKCAiA9ourBhAVEiwA3L5RFj_tCAsaiqBkSM-auCK8cAYcaMLtOKNBYtupXKEFFQ-lo1d7Yhnf7BoCpNoQAvD_BwE" target="_blank">Buy Now</a>
+                </div>
+                <div style="text-align: center;">
+                    <strong>NARS Powermatte Lip Pigment</strong>
+                    <img class="makeup-image" src="{{ url_for('static', filename='black5.png') }}" alt="Product 3" width="100" height="300">
+                    <p>The long-wearing, lightweight formula delivers intense color, making your lips a focal point in your makeup routine.</p>
+                    <a href="https://www.sephora.com/product/powermatte-lip-pigment-P421485?country_switch=us&lang=en&skuId=1965417&om_mmc=ppc-GG_17791296877___1965417__9031164_c&country_switch=us&lang=en&gad_source=1&gclid=CjwKCAiA9ourBhAVEiwA3L5RFq9QLLFE8800pSX86NvjM-TwgOYcyhaj23guZOw1fLoAUXJzZ68aORoCSBoQAvD_BwE&gclsrc=aw.ds" target="_blank">Buy Now</a>
+                </div>
+            </div>
+        </div>   
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='pink.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        /* Center the heading */
+        h3 {
+            text-align: center;
+        }
+
+        /* Style for the title on top of the image */
+        .image-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the recommended products */
+        .recommended-products {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            list-style: none;
+        }
+
+        .product {
+            flex: 1;
+            text-align: center;
+            margin: 0 10px; /* Added margin for spacing */
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .product a {
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px; /* Adjusted padding for a smaller button */
+            border-radius: 5px;
+            display: block;
+            margin: 10px auto; /* Center the button */
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Bright Spring Palette and Wardrobe Guide</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Bright Spring: Light + Warm</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Spring</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You don't need a lot of makeup to achieve a natural look. All you need are neutral shades for the most beautiful makeup look! You can also use a <strong>coral/peach</strong> lipstick, and mascara. It also works if you use neutral eyeyeshadow colors. You can also add some brown eyeliner and brown mascara to complete the look!
+            </p>
+        </div>
+        
+        <div style="display: flex; justify-content: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='spring.jpg') }}" alt="Makeup Example 1" width="300" height="300">
+                <figcaption>Image 1: Light Spring Makeup</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='spring1.png') }}" alt="Makeup Example 2" width="300" height="300">
+                <figcaption>Image 2: Bright Spring Color Palette</figcaption>
+            </figure>
+        </div>
+
+        <!-- Title on top of the image -->
+        <div class="image-title">Recommended Makeup Products</div>
+
+        <!-- Recommended Products -->
+        <div class="recommended-products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='spring2.png') }}" alt="Product 1">
+                <div class="product-name">Charlotte Tilbury Pillow Talk Push Up Lashes Mascara</div>
+                <a href="https://www.sephora.com/product/charlotte-tilbury-pillow-talk-push-up-lashes-mascara-P462841?skuId=2567741&icid2=products%20grid:p462841:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+            </div>
+    
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='spring3.png') }}" alt="Product 2">
+                <div class="product-name">Rare Beauty Stay Vulnerable Melting Blush</div>
+                <a href="https://www.sephora.com/product/rare-beauty-by-selena-gomez-stay-vulnerable-melting-blush-P467451?skuId=2418663&icid2=products%20grid:p467451:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+            </div>
+    
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="{{ url_for('static', filename='spring4.png') }}" alt="Product 3">
+                <div class="product-name">Fenty Poutsicle Hydrating Lip Stain</div>
+                <a href="https://www.sephora.com/product/fenty-poutsicle-hydrating-lip-stain-P500061?skuId=2710978&icid2=products%20grid:p500061:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Makeup Advice</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            background-image: url("{{ url_for('static', filename='back.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .advice-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 80%;
+        }
+
+        .makeup-image {
+            width: 350px; /* Increased the width */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .larger-image {
+            width: 400px; /* Increased the width */
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .image-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: disc;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .explanation {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        /* Style for the title on top of the image */
+        .image-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1><em>Light Fall Color Palette</em></h1>
+    <div class="advice-container">
+        <p>{{ advice }}</p>
+
+        <h2>Light Fall: Light + Cool</h2>
+        <div class="explanation">
+            <p>The natural makeup of the <strong>Light Fall</strong> color type is <strong>light</strong> and <strong>fresh</strong>. You don't need a lot of makeup to achieve a natural look. All you need are neutral shades for the most beautiful makeup look! You can also use a <strong>coral/peach</strong> lipstick, and mascara. It also works if you use neutral eyeshadow colors. You can also add some brown eyeliner and brown mascara to complete the look! 
+                You can also use a bronzer or <strong>light contour</strong> for natural makeup.
+            </p>
+        </div>
+        <div style="display: flex; justify-content: space-around; align-items: center;">
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='fall5.jpg') }}" alt="Makeup Example 1" width="350" height="350">
+                <figcaption>Light Fall Makeup</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='fall6.png') }}" alt="Makeup Example 2" width="350" height="350">
+                <figcaption>Fall Color Palette</figcaption>
+            </figure>
+            <figure>
+                <img class="makeup-image" src="{{ url_for('static', filename='fall7.png') }}" alt="Makeup Example 3" width="350" height="350">
+                <figcaption>Cool Autumn Makeup Palette</figcaption>
+            </figure>
+        </div>
+        
+        <div class="image-title">Soft Autumn Inspirations</div>
+
+        <figure>
+            <img class="larger-image" src="{{ url_for('static', filename='fall.png') }}" alt="Soft Autumn Inspirations">
+        </figure>
+
+        <div class="explanation">
+            <p>In addition, the creamy rose blush is fabulous because you have a fair tone skin color, so you can experiment with shades of orange, coral, or peach. For example, you can use a light coral lip gloss, peach blush, and neutral brown eye makeup. Instead of black, look for shades of orange and brown, more neutral shades for the fall season.</p>
+        </div>
+
+        <div class="explanation">
+            <div style="text-align: center;">
+                <h3>Recommended Makeup Products</h3>
+            </div>
+            <ul style="display: flex; justify-content: space-around; padding: 0; list-style: none;">
+                <!-- Product 1 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Makeup by Mario Neutral Eyeshadow Palette</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='fall2.png') }}" alt="Neutral Eyeshadow Palette" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/makeup-by-mario-master-mattes-tm-eyeshadow-palette-P98364786?country_switch=us&lang=en&skuId=2389518&om_mmc=ppc-GG_17789371101___2389518__9031230_c&country_switch=us&lang=en&gad_source=1&gclid=CjwKCAiAgeeqBhBAEiwAoDDhnxu15pqn3cCzk85RpZMJX0k8m52bF8LK4__WwsTGGg6VBezX-GJjehoCSd0QAvD_BwE&gclsrc=aw.ds" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+        
+                <!-- Product 2 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Patrick Ta Double-Take Crème & Powder Blush Duo</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='fall3.png') }}" alt="Coral Blush Duo" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/patrick-ta-major-headlines-cream-powder-blush-duo-P458747?skuId=2363836&icid2=products%20grid:p458747:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+        
+                <!-- Product 3 -->
+                <li style="flex: 1; text-align: center;">
+                    <strong>Dior Lip Glow Oil</strong>
+                    <div>
+                        <img src="{{ url_for('static', filename='fall4.png') }}" alt="Coral Lip Gloss" width="150" height="150" style="border: 1px solid #ccc; border-radius: 5px; margin: 10px 0;">
+                        <br>
+                        <a href="https://www.sephora.com/product/dior-lip-glow-oil-P453814?skuId=2316198&icid2=products%20grid:p453814:product" target="_blank" style="text-decoration: none; background-color: #4CAF50; color: white; padding: 8px 16px; border-radius: 5px;">Buy Now</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
